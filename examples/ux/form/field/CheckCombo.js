@@ -105,13 +105,13 @@
  * See also the {@link #listConfig} option for additional configuration of the dropdown.
  *
  */
-Ext.define('Ipas.ux.form.field.CheckCombo', {
+Ext.define('Ext.ux.form.field.CheckCombo', {
     extend: 'Ext.form.field.ComboBox',
     requires: [
         'Ext.grid.Panel',
         'Ext.selection.CheckboxModel'
     ],
-    alternateClassName: 'Ipas.form.CheckComboBox',
+    alternateClassName: 'Ext.form.CheckComboBox',
     alias: ['widget.checkcombobox', 'widget.checkcombo'],
 
     ariaRole: 'checkcombobox',

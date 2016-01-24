@@ -412,7 +412,7 @@ Ext.define('KitchenSink.store.Navigation', {
                         children: [
                             {id: 'simple-combo', text: 'Simple ComboBox', leaf: true},
                             //Created by bw79213 on 1/8/2016.
-                            //{id: 'check-combo', text: 'Check ComboBox', leaf: true},
+                            {id: 'check-combo', text: 'Check ComboBox (bw79213)', leaf: true},
                             {id: 'remote-combo', text: 'Remote Query ComboBox', leaf: true},
                             {id: 'remote-loaded-combo', text: 'Remote loaded ComboBox', leaf: true},
                             {id: 'custom-template-combo', text: 'Custom Template ComboBox', leaf: true}
@@ -495,12 +495,12 @@ Ext.define('KitchenSink.store.Navigation', {
                 'and useful interfaces for their users.',
                 children: [{
                     //Created by bw79213 on 1/22/2016.
-                    id: 'dd-field-to-field', text: 'Field to Field', leaf: true
+                    id: 'dd-field-to-field', text: 'Field to Field (bw79213)', leaf: true
                 },
                     {id: 'dd-field-to-grid', text: 'Field to Grid', leaf: true},
                     {id: 'dd-grid-to-form', text: 'Grid to Form', leaf: true},
                     {id: 'dd-grid-to-grid', text: 'Grid to Grid', leaf: true},
-                    { id: 'dd-grid-to-grids', text: 'Multi - Grid to Grid', leaf: true }
+                    { id: 'dd-grid-to-grids', text: 'Multi - Grid to Grid (bw79213)', leaf: true }
                 ]
             },
             {

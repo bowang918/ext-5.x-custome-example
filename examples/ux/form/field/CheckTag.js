@@ -46,13 +46,13 @@
  *
  * By: kvee_iv http://www.sencha.com/forum/member.php?29437-kveeiv
  */
-Ext.define('Ipas.ux.form.field.CheckTag', {
-    extend:'Ipas.ux.form.field.CheckCombo',
+Ext.define('Ext.ux.form.field.CheckTag', {
+    extend:'Ext.ux.form.field.CheckCombo',
     requires: [
         'Ext.selection.Model',
         'Ext.data.Store',
         'Ext.data.ChainedStore',
-        'Ipas.ux.form.field.CheckCombo'
+        'Ext.ux.form.field.CheckCombo'
     ],
 
     xtype: 'checktagfield',
