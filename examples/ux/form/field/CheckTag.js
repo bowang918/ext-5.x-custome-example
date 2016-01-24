@@ -46,6 +46,46 @@
  *
  * By: kvee_iv http://www.sencha.com/forum/member.php?29437-kveeiv
  */
+Ext.define('Ext.ux.selection.RowModel',{
+    override :'Ext.selection.RowModel',
+    onSelectChange: function(record, isSelected, suppressEvent, commitFn) {
+        var me      = this,
+            views   = me.views || [me.view],
+            viewsLn = views.length,
+            recordIndex = me.store.indexOf(record),
+            eventName = isSelected ? 'select' : 'deselect',
+            i, view;
+
+        if ((suppressEvent || me.fireEvent('before' + eventName, me, record, recordIndex)) !== false &&
+            commitFn() !== false) {
+
+            // Selection models can handle more than one view
+            for (i = 0; i < viewsLn; i++) {
+                view = views[i];
+                if (view) {
+
+                    recordIndex = view.indexOf(record);
+
+                    // The record might not be rendered due to either buffered rendering,
+                    // or removal/hiding of all columns (eg empty locked side).
+                    if (view.indexOf(record) !== -1) {
+                        if (isSelected) {
+                            view.onRowSelect(recordIndex, suppressEvent);
+                        } else {
+                            view.onRowDeselect(recordIndex, suppressEvent);
+                        }
+                    }
+                }
+            }
+
+            if (!suppressEvent) {
+                me.fireEvent(eventName, me, record, recordIndex);
+            }
+        }
+    }
+
+});
+
 Ext.define('Ext.ux.form.field.CheckTag', {
     extend:'Ext.ux.form.field.CheckCombo',
     requires: [

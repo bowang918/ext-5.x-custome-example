@@ -421,7 +421,7 @@ Ext.define('KitchenSink.store.Navigation', {
                     {id: 'form-fileuploads', text: 'File Uploads', leaf: true},
                     {id: 'form-fieldreplicator', text: 'Field Replicator', leaf: true},
                     {id: 'form-grid', text: 'Form with Grid', leaf: true},
-                    {id: 'form-tag', text: 'Tag Field', leaf: true},
+                    {id: 'form-tag', text: 'Tag Field (bw79213)', leaf: true},
                     {id: 'multi-selector', text: 'Multi-Selector Grid', leaf: true},
                     {id: 'form-fieldtypes', text: 'Field Types', leaf: true},
                     {id: 'form-fieldcontainer', text: 'Field Container', leaf: true},
