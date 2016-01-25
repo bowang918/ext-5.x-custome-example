@@ -115,6 +115,17 @@ Ext.define('Ext.ux.form.field.CheckCombo', {
     alias: ['widget.checkcombobox', 'widget.checkcombo'],
 
     ariaRole: 'checkcombobox',
+
+    config: {
+        /**
+         * @cfg {String} tooltip
+         * The underlying {@link Ext.data.Field#name data field name} to bind to this ComboBox.
+         *
+         * See also `{@link #displayField}`.
+         */
+        tooltip: false
+    },
+
     onBindStore: function (store, initial) {
         var me = this,
             picker = me.picker,
@@ -237,6 +248,13 @@ Ext.define('Ext.ux.form.field.CheckCombo', {
                     menuDisabled: true,
                     sortable: false,
                     dataIndex: me.displayField,
+                    renderer: function(value, metaData, record, rowIndex, colIndex, store) {
+                        var tip = me.tooltip===true ? me.displayField : me.tooltip;
+                        if(tip){
+                            metaData.tdAttr = 'data-qtip="' + record.get(tip) + '"';
+                        }
+                        return value;
+                    },
                     flex: 1
                 }]
             }, me.listConfig, me.defaultListConfig);
