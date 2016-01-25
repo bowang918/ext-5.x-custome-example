@@ -65,6 +65,7 @@ Ext.define('KitchenSink.view.form.combobox.CheckBoxSelectionMode', {
             xtype: 'checkcombo',
             reference: 'states',
             publishes: 'value',
+            tooltip: true,
             multiSelect: true,
             fieldLabel: 'Select States(Multi Selection)',
             displayField: 'state',
