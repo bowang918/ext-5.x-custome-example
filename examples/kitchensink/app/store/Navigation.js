@@ -278,7 +278,7 @@ Ext.define('KitchenSink.store.Navigation', {
                     {id: 'reconfigure-grid', text: 'Reconfigure Grid', leaf: true},
                     {id: 'property-grid', text: 'Property Grid', leaf: true},
                     {id: 'cell-editing', text: 'Cell Editing', leaf: true},
-                    {id: 'row-editing', text: 'Row Editing', leaf: true},
+                    {id: 'row-editing', text: 'Row Editing(bw79213)', leaf: true},
                     {id: 'row-expander-grid', text: 'Row Expander', leaf: true},
                     {id: 'big-data-grid', text: 'Big Data', leaf: true},
                     {id: 'widget-grid', text: 'Widget grid', leaf: true},
