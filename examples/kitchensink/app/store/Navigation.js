@@ -413,6 +413,7 @@ Ext.define('KitchenSink.store.Navigation', {
                             {id: 'simple-combo', text: 'Simple ComboBox', leaf: true},
                             //Created by bw79213 on 1/8/2016.
                             {id: 'check-combo', text: 'Check ComboBox (bw79213)', leaf: true},
+                            {id: 'tree-combo', text: 'Tree ComboBox (bw79213)', leaf: true},
                             {id: 'remote-combo', text: 'Remote Query ComboBox', leaf: true},
                             {id: 'remote-loaded-combo', text: 'Remote loaded ComboBox', leaf: true},
                             {id: 'custom-template-combo', text: 'Custom Template ComboBox', leaf: true}
